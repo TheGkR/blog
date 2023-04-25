@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typewriter Effect with Background Image</title>
+	<style>
+		body {
+			background-image: url("Assets/notepad.png");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			font-family: Arial, sans-serif;
+			color: #212A3E;
+		}
+		body {
+	       padding: 30px;
+		}	
+		.typewriter {
+			display: flex;
+			justify-content: center;
+			align-items: top;
+			height: 100vh;
+		}
+		.typewriter h1 {
+			font-size: 15px;
+			font-weight: bold;
+			overflow: hidden;
+			padding-right: 5px;
+			animation: typing 0s steps(20, end) forwards;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+			to {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<audio id="typing-sound" src="Assets/typing-sound.mp3"></audio>
+	<div class="typewriter">
+		<h1>&nbsp;</h1>
+	</div>
+
+	<script>
+		// Optional: change the text content
+		var h1 = document.querySelector('.typewriter h1');
+		var text = "Welcome to my website!";
+		var delay = 100; // milliseconds
+		var i = 0;
+		var sound = document.getElementById("typing-sound");
+		
+		function type() {
+			if (i < text.length) {
+				h1.innerHTML += text.charAt(i);
+				i++;
+				sound.play();
+				setTimeout(type, delay);
+			} else {
+				sound.pause();
+			}
+		}
+		setTimeout(type, delay * text.length);
+		
+		sound.addEventListener('ended', function() {
+			this.currentTime = 0;
+			this.pause();
+		}, false);
+	</script>
+</body>
+</html>
