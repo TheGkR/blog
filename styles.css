@@ -1,0 +1,109 @@
+/* styles.css */
+/* Sidebar styles */
+@media only screen and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        order: 2;
+    }
+
+    main {
+        order: 1;
+    }
+
+    footer {
+        order: 3;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .sidebar {
+        display: block;
+        background-color: #f9f9f9;
+        width: 200px;
+        height: 100vh;
+    }
+}
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Navigation styles */
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0; /* Adjust this value to increase or decrease the height */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Header styles */
+header {
+    background-color: transparent;
+    padding: 20px;
+    margin-top: 50px; /* Adjust this value as needed */
+}
+
+div {
+  border-color: coral;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("Assets/main.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	 display: flex;
+	 flex-direction: column;
+    min-height: 100vh;
+}
