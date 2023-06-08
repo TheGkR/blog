@@ -1,34 +1,4 @@
 /* styles.css */
-/* Sidebar styles */
-@media only screen and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    header {
-        order: 2;
-    }
-
-    main {
-        order: 1;
-    }
-
-    footer {
-        order: 3;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .sidebar {
-        display: block;
-        background-color: #f9f9f9;
-        width: 200px;
-        height: 100vh;
-    }
-}
 /* Dropdown styles */
 .dropdown {
   position: relative;
