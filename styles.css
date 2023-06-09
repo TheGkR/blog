@@ -1,4 +1,48 @@
 /* styles.css */
+/* Popup text styles */
+.popup-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out forwards;
+	 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animated text styles */
+.animated-text {
+    animation: typing 4s steps(40) 1s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    /* Responsive styles */
+}
 /* Dropdown styles */
 .dropdown {
   position: relative;
