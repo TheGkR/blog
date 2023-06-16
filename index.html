@@ -9,28 +9,29 @@
 <body>
     <script>
         // Function to detect the device type
-        function getDeviceType() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+function getDeviceType() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            if (/android/i.test(userAgent)) {
-                return "phone";
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                return "tablet";
-            } else {
-                return "pc";
-            }
-        }
+    if (/iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "phone";
+    } else if (/iPad/.test(userAgent) && !window.MSStream) {
+        return "pc";
+    } else if (/android/i.test(userAgent)) {
+        return "phone";
+    } else {
+        return "pc";
+    }
+}
 
-        // Redirect based on the device type
-        var deviceType = getDeviceType();
+// Redirect based on the device type
+var deviceType = getDeviceType();
 
-        if (deviceType === "phone") {
-            window.location.href = "phone.html";
-        } else if (deviceType === "tablet") {
-            window.location.href = "tablet.html";
-        } else {
-            window.location.href = "pc.html";
-        }
+if (deviceType === "phone") {
+    window.location.href = "phone.html";
+} else if (deviceType === "pc") {
+    window.location.href = "home.html";
+}
+
     </script>
 </body>
 </html>
