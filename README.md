@@ -6,11 +6,4 @@ The Music on the Main Menu Is free.
 The Main menu picture was drawn by me Feel free to use it.
 ### Lot of people reuploaded my picture and some of them is even getting money from it.But i don't care.
 
-# Future plan's
-Adding a story on the webpage.
-
-Adding voice over.
-
-Providing user the complete freedom to make changes in the website.
-
 #### Note that the achievement's are My personel achievements.
